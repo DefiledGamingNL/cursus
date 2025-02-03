@@ -42,6 +42,15 @@ class Product extends Model
         'user_id',
     ];
 
+    public static function boot()
+    {
+        parent::boot();
+        static::creating(static function ($product) {
+            $product->slug = \Str::slug($product->name);
+        });
+    }
+
+
     public function category()
     {
         return $this->belongsTo(Category::class);

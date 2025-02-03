@@ -44,6 +44,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('images')->nullable();
             $table->foreignId('user_id')->constrained();
+            $table->foreignId('category_id')->constrained();
             // SALE
             $table->boolean('is_on_sale')->default(false);
             $table->softDeletes();

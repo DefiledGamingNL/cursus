@@ -5,33 +5,25 @@ export const RIGHT_NAVIGATION = [
     },
     {
         name: 'Producten',
-        href: '/producten'
+        href: 'products'
     },
     {
         name: 'Aanbiedingen',
-        href: '/aanbiedingen'
+        href: 'sale'
     },
     {
         name: 'Winkelwagen',
-        href: '/winkelwagen'
+        href: 'cart'
     },
     {
         name: 'Bestellen',
-        href: '/bestellen'
+        href: 'order'
     },
 ]
 
 export const LEFT_NAVIGATION = [
-    // {
-    //     name: 'Inloggen',
-    //     href: '/login'
-    // },
-    // {
-    //     name: 'Registreren',
-    //     href: '/register'
-    // },
     {
         name: 'Account',
-        href: '/dashboard'
+        href: 'login'
     }
 ]
