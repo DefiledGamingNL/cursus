@@ -20,6 +20,6 @@ class AdminSeeder extends Seeder
             'email_verified_at' => now(),
             'password' => bcrypt('HalloDikkieDik#lar123'),
             'remember_token' => Str::random(10),
-        ])->assignRole('admin');
+        ])->assignRole('admin')->givePermissionTo('view admin');
     }
 }
