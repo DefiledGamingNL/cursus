@@ -14,8 +14,8 @@ const props = defineProps({
 
 const classes = computed(() =>
     props.active
-        ? "ms-4 font-bold focus:rounded-sm hover:text-slate-500"
-        : "ms-4 font-light focus:rounded-sm hover:text-slate-500",
+        ? 'relative px-4 py-3 flex items-center space-x-4 rounded-xl text-white bg-gradient-to-r from-sky-600 to-cyan-400'
+        : 'px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group' ,
 );
 </script>
 

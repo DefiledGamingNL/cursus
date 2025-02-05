@@ -18,7 +18,7 @@ Route::get('/', function () {
         ->take(3)
         ->get()
     ]);
-});
+})->name('home');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -32,12 +32,14 @@ Route::middleware('auth')->group(function () {
 
 Route::group(['middleware' => ['auth', 'role:admin']], function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+    Route::get('/admin/create-product', [ProductController::class, 'create'])->name('admin.products.create');
 });
 
-
 Route::get('/products/{product:slug}', [ProductController::class, 'show'])->name('products.show');
-
-
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+Route::get('/aanbiedingen', function () {
+    return Inertia::render('Sale');
+})->name('sale');
 
 
 require __DIR__.'/auth.php';

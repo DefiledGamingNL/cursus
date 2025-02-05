@@ -24,7 +24,7 @@ class ProductController extends Controller
 
     public function create(): Response
     {
-        return Inertia::render('Products/Create');
+        return Inertia::render('Admin/Products/Create');
     }
 
 }
